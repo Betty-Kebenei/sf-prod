@@ -1,0 +1,40 @@
+.direction-determinants {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+
+  &-mission, &-vision, &-values, &-verse, &-objectives {
+    img {
+      height: 60px;
+      width: 60px;
+    }
+
+    h2 {
+      font-size: $title-size;
+      text-decoration: underline;
+    }
+
+    p, ul {
+      font-size:  $body-size;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+@include windowSize($TabletLandScape){
+  .direction-determinants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-mission, &-vision, &-values,  &-verse, &-objectives{
+      margin: 0 10px;
+      padding: 0 20px;
+      flex: 1;
+    }
+  }
+}
